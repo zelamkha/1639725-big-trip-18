@@ -4,9 +4,11 @@ import {render} from '../render.js';
 import SortView from '../view/sort-view.js';
 //import CreateFormEditView from '../view/form-edit-view.js';
 import PointView from '../view/list-point-view.js';
-export default class BoardPresenter {
-  eventsListComponent = new ListView();
 
+//const ListContainer = document.querySelector('.trip-events__list');
+
+export default class Presenter {
+  eventsListComponent = new ListView();
 
   init = (boardContainer) => {
     this.boardContainer = boardContainer;
@@ -15,7 +17,7 @@ export default class BoardPresenter {
     render(this.eventsListComponent, this.boardContainer);
 
     for (let i = 0; i < 3; i++) {
-      render(new PointView() , this.boardContainer);
+      render(new PointView() , this.eventsListComponent.getElement());
     }
   };
 }
