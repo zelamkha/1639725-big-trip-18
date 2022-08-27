@@ -16,3 +16,4 @@ render(new CreateFormEditView(), siteSortElement);
 render(new ListpointView, siteSortElement);
 
 boardPresenter.init(siteSortElement);
+ 

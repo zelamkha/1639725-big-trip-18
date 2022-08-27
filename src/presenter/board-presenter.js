@@ -15,7 +15,7 @@ export default class BoardPresenter {
     render(new CreateFormEditView(), this.boardComponent.getElement());
     render(this.taskListComponent, this.boardComponent.getElement());
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 2; i++) {
       render(new ListpointView(), this.taskListComponent.getElement());
     }
   };
